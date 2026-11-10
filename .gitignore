@@ -1,0 +1,9 @@
+node_modules
+dist
+coverage
+*.log
+.DS_Store
+packages/mobile/android
+packages/mobile/ios
+packages/mobile/.expo
+.expo-shared
