@@ -1,0 +1,108 @@
+/* Salah Tracker — design tokens v1.0
+   Single source of truth for web (Next.js PWA). Mobile mirrors these in tokens.ts.
+   Palette = emerald (v4 mockups). Names match the v4 mockups; the *T tokens and
+   onPri/hero tokens are new and exist to make text pass WCAG AA. */
+
+:root {
+  /* Brand */
+  --pri: #166534;  --priH: #14532D;  --priL: #DCFCE7;  --onPri: #FFFFFF;
+  --heroFrom: #166534;  --heroTo: #14532D;  --onHero: #FFFFFF;
+  --recFrom: #3F6212;  --recTo: #365314;  --onRec: #FFFFFF;
+
+  /* Status roles. Base = dots, bars, fills. L = tint background. T = text/icon on tint. */
+  --suc: #22C55E;  --sucL: #DCFCE7;  --sucT: #166534;   /* on time */
+  --war: #CA8A04;  --warL: #FEF3C7;  --warT: #854D0E;   /* qaza, sync warning */
+  --inf: #4F46E5;  --infL: #E0E7FF;  --infT: #3730A3;   /* settled */
+  --acc: #65A30D;  --accL: #ECFCCB;  --accT: #3F6212;   /* recovery, milestones */
+  --err: #DC2626;  --errL: #FEE2E2;  --errT: #991B1B;   /* destructive and errors only */
+
+  /* Surfaces, borders, text */
+  --bg: #F7F9F4;  --srf: #FCFDFB;  --srf2: #EEF1EA;
+  --bd: #E5E7EB;  --bd2: #D1D5DB;
+  --t1: #1F2937;  --t2: #4B5563;  --t3: #6B7280;
+  --focus: #166534;
+
+  /* Heatmap, level 0 (none) to 4 (all five on time) */
+  --h0: #EEF1EA;  --h1: #BBF7D0;  --h2: #86EFAC;  --h3: #22C55E;  --h4: #166534;
+
+  /* Elevation */
+  --sh-1: 0 1px 2px rgba(31,41,55,.06), 0 1px 3px rgba(31,41,55,.06);
+  --sh-2: 0 4px 12px rgba(31,41,55,.08), 0 2px 4px rgba(31,41,55,.05);
+  --sh-3: 0 12px 40px rgba(31,41,55,.14), 0 4px 12px rgba(31,41,55,.08);
+
+  /* Shape */
+  --r-xs: 8px;  --r-sm: 12px;  --r-md: 16px;  --r-lg: 24px;  --r-pill: 999px;
+
+  /* Spacing (4px base) */
+  --s1: 4px;  --s2: 8px;  --s3: 12px;  --s4: 16px;  --s5: 20px;
+  --s6: 24px;  --s8: 32px;  --s10: 40px;  --s12: 48px;
+
+  /* Layout */
+  --gutter-m: 16px;  --gutter-w: 32px;  --content-max: 960px;
+  --touch: 44px;  --tabbar-h: 58px;
+
+  /* Motion */
+  --ease: cubic-bezier(.4, 0, .2, 1);
+  --dur-f: 150ms;  --dur-m: 250ms;
+
+  /* Type */
+  --font-ui: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-bn: 'Noto Sans Bengali', 'Inter', sans-serif;
+  --font-ar: 'Noto Naskh Arabic', 'Traditional Arabic', serif;
+
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --pri: #4ADE80;  --priH: #22C55E;  --priL: #052E16;  --onPri: #052E16;
+    --heroFrom: #166534;  --heroTo: #0F3D22;  --onHero: #F0FDF4;
+    --recFrom: #3F6212;  --recTo: #1A2E05;  --onRec: #F7FEE7;
+    --suc: #4ADE80;  --sucL: #052E16;  --sucT: #4ADE80;
+    --war: #FBBF24;  --warL: #422006;  --warT: #FBBF24;
+    --inf: #A5B4FC;  --infL: #1E1B4B;  --infT: #A5B4FC;
+    --acc: #A3E635;  --accL: #1A2E05;  --accT: #A3E635;
+    --err: #F87171;  --errL: #450A0A;  --errT: #F87171;
+    --bg: #0D1512;  --srf: #16211B;  --srf2: #121A16;
+    --bd: #2A3A30;  --bd2: #3D4F43;
+    --t1: #F8FAFC;  --t2: #B6C2CE;  --t3: #8A99A8;
+    --focus: #4ADE80;
+    --h0: #1B2A22;  --h1: #14532D;  --h2: #15803D;  --h3: #22C55E;  --h4: #86EFAC;
+    --sh-1: 0 1px 2px rgba(0,0,0,.5), 0 1px 3px rgba(0,0,0,.4);
+    --sh-2: 0 6px 20px rgba(0,0,0,.55), 0 2px 6px rgba(0,0,0,.4);
+    --sh-3: 0 16px 50px rgba(0,0,0,.6), 0 6px 16px rgba(0,0,0,.4);
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme="dark"] {
+  --pri: #4ADE80;  --priH: #22C55E;  --priL: #052E16;  --onPri: #052E16;
+  --heroFrom: #166534;  --heroTo: #0F3D22;  --onHero: #F0FDF4;
+  --recFrom: #3F6212;  --recTo: #1A2E05;  --onRec: #F7FEE7;
+  --suc: #4ADE80;  --sucL: #052E16;  --sucT: #4ADE80;
+  --war: #FBBF24;  --warL: #422006;  --warT: #FBBF24;
+  --inf: #A5B4FC;  --infL: #1E1B4B;  --infT: #A5B4FC;
+  --acc: #A3E635;  --accL: #1A2E05;  --accT: #A3E635;
+  --err: #F87171;  --errL: #450A0A;  --errT: #F87171;
+  --bg: #0D1512;  --srf: #16211B;  --srf2: #121A16;
+  --bd: #2A3A30;  --bd2: #3D4F43;
+  --t1: #F8FAFC;  --t2: #B6C2CE;  --t3: #8A99A8;
+  --focus: #4ADE80;
+  --h0: #1B2A22;  --h1: #14532D;  --h2: #15803D;  --h3: #22C55E;  --h4: #86EFAC;
+  --sh-1: 0 1px 2px rgba(0,0,0,.5), 0 1px 3px rgba(0,0,0,.4);
+  --sh-2: 0 6px 20px rgba(0,0,0,.55), 0 2px 6px rgba(0,0,0,.4);
+  --sh-3: 0 16px 50px rgba(0,0,0,.6), 0 6px 16px rgba(0,0,0,.4);
+  color-scheme: dark;
+}
+
+/* Base */
+body { background: var(--bg); color: var(--t1); font-family: var(--font-ui);
+       font-size: 14px; line-height: 1.5; font-weight: 500; -webkit-font-smoothing: antialiased; }
+.bn, .bn * { font-family: var(--font-bn); line-height: 1.6; letter-spacing: 0; text-transform: none; }
+.ar { font-family: var(--font-ar); direction: rtl; line-height: 2; }
+.num { font-variant-numeric: tabular-nums; }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
