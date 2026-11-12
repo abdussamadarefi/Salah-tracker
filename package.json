@@ -1,0 +1,1 @@
+{"devDependencies":{"@eslint/js":"^9.34.0","eslint":"^9.34.0","typescript":"~5.9.3","typescript-eslint":"^8.44.0"},"name":"salah-tracker","packageManager":"pnpm@9.12.3","private":true,"scripts":{"lint":"pnpm -r lint","test":"pnpm -r test","typecheck":"pnpm -r typecheck"},"version":"1.0.0"}
